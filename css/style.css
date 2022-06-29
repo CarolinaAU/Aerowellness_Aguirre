@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+body{
+	overflow-x: hidden;
+    background-image: url(../img/fondo_blanco_texture.jpg);
+    background-repeat: repeat;   
+    background-attachment: fixed; 
+    font-family:roboto,sans-serif;
+}
+
+
+*{
+	padding: 0px;
+	margin: 0;
+}
+
+#contenedor-grid{
+
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+    grid-template-columns: 1fr 3fr 1fr;     
+	grid-template-rows: repeat(5, 1fr); 	
+    grid-template-areas: 
+	"cabecera cabecera cabecera" 
+	"main main main" 
+	"foto-bailarina descripcion-bailarina descripcion-bailarina" 
+	"foto-estiramiento descripcion-estiramiento descripcion-estiramiento" 	
+	"pie pie pie";
+}
+
+#servicios-grid{
+
+    width: 100vw;
+	height: 100vh;
+    display:grid;
+    grid-template-columns: 1fr 3fr 1fr;     
+	grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+    "cabecera cabecera cabecera" 
+	"main main main"
+    "foto-aero_acro pack1 pack1"
+    "foto-equilibrio pack2 pack2"	
+    "foto-fuerza pack3 pack3"
+	"pie pie pie";
+
+}
+
+.cabecera{
+	grid-area: cabecera;
+}
+
+.main{	
+	grid-area:main;	
+}
+
+.foto-bailarina{	
+	grid-area: foto-bailarina;
+}
+
+.foto-estiramiento{	
+	grid-area: foto-estiramiento;
+}
+
+.descripcion-bailarina{	
+	grid-area: descripcion-bailarina;    
+}
+
+.descripcion-estiramiento{
+	grid-area: descripcion-estiramiento;
+    
+}
+
+.foto-aero_acro{
+    grid-area: foto-aero_acro;
+}
+
+.pack1{
+    grid-area: pack1;
+}
+
+.foto-equilibrio{
+    grid-area: foto-equilibrio;
+}
+
+.pack2{
+    grid-area: pack2;
+}
+
+.foto-fuerza{
+    grid-area: foto-fuerza;
+}
+
+.pack3{
+    grid-area: pack3;
+}
+
+.pie{	
+	grid-area: pie;
+}
+
+    
+.borde-foto img {
+    border: 4px solid #fff;
+    width: 23vw;
+    
+}
+
+header{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+    
+}
+
+header img{    
+    width: 300px;
+    
+}
+
+.img_header{
+    width:100%;
+    height:auto;
+    border: 4px solid #fff;   
+    
+}
+
+
+
+.cabecera{ 
+    background-color: rgba(238, 188, 247, .5);  
+}
+
+
+.menu ul{
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li{
+    margin-right: 10px;
+}
+    .menu ul li a{ 
+        text-decoration: none;
+        background-image: -moz-linear-gradient(currentColor, currentColor);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size .3s;
+    }
+
+.menu ul li a:hover{
+    color: rgb(139, 112, 139);
+    font-weight: 600;
+    background-size: 100% 2px;
+
+}    
+
+.texto-titulo{      
+    color:#EB6CD2;
+    text-align: center;
+    font-size: 20px;
+    padding: 15px;
+    
+}
+
+
+.presentacion{
+    padding-left: 2px;
+}
+
+.text-parrafo{
+    background-color: rgba(223, 202, 216, 0.3); ;
+}
+
+.sub-titulo{
+    color:#b320b8;
+}
+
+
+.content-mapa{
+    width: 100%;
+}
+
+fieldset{
+    border: 2px solid #6D389C; 
+}
+
+fieldset legend {
+    color:#652E96;
+    }
+
+.label-campo {
+    color:#652E96;
+    }
+
+.btn{
+    background-color: #EB6CD2;color: white;
+    }
+
+.foto{
+    width: 100%;
+}
+
+
+footer{
+    padding:20px;
+    text-align: center;   
+    background-color: rgba(238, 188, 247, .5);    
+}
+
+.text-footer{    
+    color:#662F97;
+    }
+
+
+@media (max-width: 768px){ 
+
+    #contenedor-grid{
+
+        width: 100vw;
+        height: 100vh;
+        display: grid;        
+        grid-template-columns: 1fr;     
+        grid-template-rows: repeat(7, 1fr); 	
+        grid-template-areas: 
+        "cabecera" 
+        "main" 
+        "foto-bailarina"
+        "descripcion-bailarina" 
+        "foto-estiramiento "
+        "descripcion-estiramiento" 	
+        "pie";
+    }
+
+    #servicios-grid{
+        width: 100vw;
+	    height: 100vh;
+        display:grid;
+        grid-template-columns: 1fr;     
+        grid-template-rows: repeat(9, 1fr);
+        grid-template-areas:
+        "cabecera" 
+        "main"
+        "foto-aero_acro"
+        "pack1"
+        "foto-equilibrio" 
+        "pack2"	
+        "foto-fuerza"
+        "pack3"
+        "pie";
+    
+    }
+
+    .borde-foto {
+            
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;        
+    }
+
+    .borde-foto img {
+
+        border: 4px solid #fff;
+        width: 90%;
+    }
+
+    .descripcion-bailarina{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .descripcion-estiramiento{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }    
+
+    
+}
+
+
